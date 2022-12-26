@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crimson</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <header>
+      <div class="menutoggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="navigation">
+        <li><a id="home" href="index.html">الرئيسية</a></li>
+        <li><a href="">مواقعنا</a></li>
+        <li><a href="">متاجرنا</a></li>
+        <li><a href="">قنواتنا على اليوتيوب</a></li>
+        <li><a href="">السوشيال ميديا التابعة لنا</a></li>
+        <li><a class="lang" href="en/index.html">English</a></li>
+        <img src="images/moon.png" alt="Moon" id="icon" />
+      </ul>
+      <a class="logo" href="index.html">
+        <img src="images/crimson-logo.png" alt="Crimson Logo" />
+      </a>
+    </header>
+    <div class="parent">
+      <div class="content">
+        <div class="text-box">
+          <h3>
+            نحو مستقبل عربي
+            <span>رقمي</span>
+          </h3>
+          <p>
+            Crimson هى شركة برمجيات عربية تقوم بتقديم مجموعة من الخدمات
+            الإلكترونية مثل المواقع و المتاجر الإلكترونية و قنوات اليوتيوب و
+            مجموعة حسابات على مواقع التواصل الإجتماعي بهدف إثراء المحتوي العربي
+            و تطويره و جعله ينافس المحتوي الأجنبي بقوة .
+          </p>
+          <a href="about-us/index.html"> اعرف أكثر عن الشركة </a>
+        </div>
+      </div>
+      <div class="home-vector">
+        <img src="/images/home-page.jpg" alt="Business" />
+      </div>
+    </div>
+    <footer>
+      <p class="copyright">جميع الحقوق محفوظة Crimson © 2022</p>
+      <ul>
+        <li><a href="about-us/index.html">من نحن</a></li>
+        <li><a href="">تواصل معنا</a></li>
+      </ul>
+    </footer>
+    <script>
+      const menuToggle = document.querySelector(".menutoggle");
+      const navigation = document.querySelector(".navigation");
+
+      menuToggle.addEventListener("click", function () {
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+
+        if (menuToggle.classList.contains("active")) {
+          menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+        } else {
+          menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+
+      var icon = document.getElementById("icon");
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "images/sun.png";
+        } else {
+          icon.src = "images/moon.png";
+        }
+      };
+    </script>
+  </body>
+</html>

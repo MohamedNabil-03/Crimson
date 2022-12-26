@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crimson - About US</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="../../images/favicon.png" />
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="../index.html">
+        <img src="../../images/crimson-logo.png" alt="Crimson Logo" />
+      </a>
+      <div class="menutoggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="navigation">
+        <li><a id="home" href="../index.html">Home</a></li>
+        <li><a href="">Our Websites</a></li>
+        <li><a href="">Our Stores</a></li>
+        <li><a href="">Our YouTube Channels</a></li>
+        <li><a href="">Our Social Media Accounts</a></li>
+        <li>
+          <a class="lang" href="../../about-us/index.html">اللغة العربية</a>
+        </li>
+        <img src="../../images/moon.png" alt="Moon" id="icon" />
+      </ul>
+    </header>
+    <!-- <section class="parent"> -->
+    <div class="content">
+      <div class="text-box">
+        <h3>Welcome To <span>About US</span> Page</h3>
+        <p>
+          Crimson is A Software Company That Provides A Range of Online Services
+          in Different Fields .
+        </p>
+      </div>
+    </div>
+    <div class="goals">
+      <h4>Our Goals</h4>
+      <ol>
+        <li>
+          <span>1</span>
+          <p>
+            Enriching And Developing The Arabic Content And Make it Compete
+            Strongly With The Foreign Content And overcome it .
+          </p>
+        </li>
+        <li>
+          <span>2</span>
+          <p>
+            Developing Online Services in The Arab World And Adding New services
+            , So That Users Are Not Forced To Use Foreign Services .
+          </p>
+        </li>
+        <li>
+          <span>3</span>
+          <p>
+            Providing Real Value in The Content And Presenting it in A Different
+            And Enjoyable Way , So That The User Does Not Get Bored While
+            Watching Videos or Reading Articles in Different Fields .
+          </p>
+        </li>
+        <li>
+          <span>4</span>
+          <p>
+            Spreading Digital Awareness Among Users And Make Them Get The Most
+            of The internet Away From Social Media And Wasting Time .
+          </p>
+        </li>
+        <li>
+          <span>5</span>
+          <p>
+            Saving Time And Effort Because it is Not Necessary For Users To
+            Leave Their Home Since There is The Possibility To Access All The
+            Services They Need From Any Smart Device Connected To The internet
+            Such As A Smart Phone or A Personal Computer .
+          </p>
+        </li>
+      </ol>
+    </div>
+    <div class="founder">
+      <div class="founder-title">
+        <h4>The Founder</h4>
+      </div>
+      <div class="founder-description">
+        <div class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+          possimus, similique tempore rerum hic animi ducimus soluta quam.
+          Architecto placeat aspernatur, nulla corporis quasi, sint ullam quos
+          praesentium nobis illum maxime possimus in optio incidunt? Quaerat
+          consectetur rerum in explicabo ad placeat sunt sequi voluptatibus
+          minus, tempora, corporis deleniti hic numquam quae perferendis quidem
+          a. Architecto, ut, reprehenderit commodi quos sit dignissimos amet
+          odit tenetur eum, voluptates expedita provident debitis porro vel
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="founder-img">
+          <img src="../../images/avatar.png" alt="The Founder" />
+          <h2>The Founder</h2>
+          <!-- <p>المؤسس و الرئيس التنفيذي لشركة <a href="../index.html">Crimson</a> / مطور ويب</p> -->
+          <div class="founder-social">
+            <a
+              class="founder-facebook"
+              href="https://www.facebook.com/"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              class="founder-instagram"
+              target="_blank"
+              href="https://www.instagram.com/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              class="founder-linkedin"
+              target="_blank"
+              href="https://www.linkedin.com/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              class="founder-youtube"
+              target="_blank"
+              href="https://www.youtube.com/"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </section> -->
+    <footer>
+      <p class="copyright">All Rights Reserved Crimson © 2022</p>
+      <ul>
+        <li><a href="index.html">About US</a></li>
+        <li><a href="">Contact US</a></li>
+      </ul>
+    </footer>
+    <script>
+      const menuToggle = document.querySelector(".menutoggle");
+      const navigation = document.querySelector(".navigation");
+
+      menuToggle.addEventListener("click", function () {
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+
+        if (menuToggle.classList.contains("active")) {
+          menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+        } else {
+          menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+
+      var icon = document.getElementById("icon");
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "../../images/sun.png";
+        } else {
+          icon.src = "../../images/moon.png";
+        }
+      };
+    </script>
+  </body>
+</html>
